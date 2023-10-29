@@ -6,7 +6,6 @@ import Text from '@/src/components/Text/Text'
 import Footer from "./patterns/Footer/Footer";
 import TextClass from "../../theme/defaults/TextClass";
 import Link from "@/src/components/Link/Link";
-import templateConfig from "../../../../template-config.yml";
 
 export default function HomeScreen() {
   return (
