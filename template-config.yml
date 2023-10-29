@@ -1,0 +1,11 @@
+site:
+  title: "Wesley Alcantara - Timeline"
+  description: "Bem vindo a minha timeline pessoal"
+personal:
+  name: "Wesley Alcantara"
+  avatar: https://github.com/wesleyalcantara.png
+  socialNetworks:
+    github: "https://github.com/wesleyalcantara"
+    linkedin: "https://www.linkedin.com/in/wesley-alcantara-58148020b/"
+    instagram: "https://www.instagram.com/wesley.alcantara_"
+
