@@ -4,10 +4,8 @@ import Background from './patterns/Background/Background';
 import Menu from "./patterns/Menu/Menu";
 import Feed from "./patterns/Feed/Feed";
 import Footer from "./patterns/Footer/Footer";
+import HomeScreenProps from "@/src/components/screens/HomeScreen/HomeScreenProps"
 
-interface HomeScreenProps extends Post {
-  posts: Post[];
-}
 
 export default function HomeScreen(props: HomeScreenProps) {
   return (
