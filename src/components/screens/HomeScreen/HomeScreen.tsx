@@ -6,11 +6,9 @@ import Feed from "./patterns/Feed/Feed";
 import Footer from "./patterns/Footer/Footer";
 import PostsService from "@/services/posts/PostsService";
 
-interface HomeScreenProps extends Post {
-  posts: Post[];
-}
-
-export default function HomeScreen(props: HomeScreenProps) {
+export default function HomeScreen(props: { posts: any; }) {
+  const { posts } = props;
+  
   return (
     <Box
       tag="main"
@@ -19,7 +17,7 @@ export default function HomeScreen(props: HomeScreenProps) {
       <Menu/>
       <Feed>
         <Feed.Header />
-        <Feed.Posts  posts={props.posts} />
+        <Feed.Posts posts={props.posts} />
       </Feed>
       <Footer/>
     </Box>   
