@@ -5,13 +5,15 @@ import Text from "../Text/Text";
 import TextClass from '../theme/defaults/TextClass';
 
 interface LinkProps {
+  
   href: string;
   children: React.ReactNode;
   variant?: TextClass;
   target?: string;
+  className?: string
 }
 
-export default function Link({ href, ...props }: LinkProps) {
+export default function Link({ href, className, ...props }: LinkProps) {
   const linkProps = {
     href,
     ...props,

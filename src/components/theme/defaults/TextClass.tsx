@@ -1,7 +1,7 @@
 enum TextClass {
   display1 = 'font-extrabold leading-1.5 text-4xl md:text-5xl p-xs',
 
-  heading1 = 'font-bold leading-1.5text-2xl md:text-3xl',
+  heading1 = 'font-bold leading-1.5 text-2xl md:text-3xl',
 
   heading2 = 'font-bold leading-1.5 text-xl md:text-2xl',
 

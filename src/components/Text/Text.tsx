@@ -12,7 +12,7 @@ export default function Text ({tag = 'div', children, variant}: TextProps) {
   const BaseText = tag;
 
   return (
-    <BaseText className={variant}>
+    <BaseText className={variant} >
       {children}
     </BaseText>
   )

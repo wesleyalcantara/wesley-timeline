@@ -1,13 +1,27 @@
 import Box from "@/src/components/Box/Box";
+import type { Post } from '@/services/posts/PostsService'
 import Background from './patterns/Background/Background';
 import Menu from "./patterns/Menu/Menu";
 import Feed from "./patterns/Feed/Feed";
-import Text from '@/src/components/Text/Text'
-import Footer from "./patterns/Footer/Footer";
-import TextClass from "../../theme/defaults/TextClass";
-import Link from "@/src/components/Link/Link";
+import Footer from "./patterns/Footer/Footer"; 
+/* import PostsService from "@/services/posts/PostsService" */
 
-export default function HomeScreen() {
+/* export async function getStaticProps() {
+  const postsService = new PostsService();
+  const posts = await postsService.getAll();
+  
+  return {
+    props: {
+      posts,
+    },
+  };
+} */
+
+interface HomeScreenProps {
+  posts: Post[];
+}
+
+export default function HomeScreen(props :HomeScreenProps) {
   return (
     <Box
       tag="main"
@@ -15,11 +29,10 @@ export default function HomeScreen() {
       <Background/>
       <Menu/>
       <Feed>
-        <Feed.Header/>
+        <Feed.Header />
+        <Feed.Posts  posts={props.posts} />
       </Feed>
       <Footer/>
     </Box>   
   );
 }
-
-

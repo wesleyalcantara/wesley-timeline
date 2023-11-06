@@ -8,6 +8,7 @@ export interface PropsButtonBase {
   variant?: TextClass;
   tag?: string;
   href?: string;
+  target?: string;
 }
 
 export default function ButtonBase({href, tag, children, ...props }: PropsButtonBase) {

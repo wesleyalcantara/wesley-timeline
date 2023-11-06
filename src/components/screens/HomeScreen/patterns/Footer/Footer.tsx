@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <Box className="mt-auto w-full bg-neutral-900 text-neutral-000 h-20 flex items-center justify-center">
       <Text variant={TextClass.body2}>
-        Feito por Wesley Alcantara
+        Desenvolvido por Wesley Alcantara
       </Text>
     </Box>
   );

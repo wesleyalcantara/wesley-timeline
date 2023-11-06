@@ -13,7 +13,6 @@ export default function Image ({src, alt, ...props}: ImageProps) {
       alt={alt}
       {...props}
     >
-      
     </BaseImage>
   )
 }

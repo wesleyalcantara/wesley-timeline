@@ -6,6 +6,9 @@ import Image from "@/src/components/Image/Image";
 import Link from "@/src/components/Link/Link";
 import Button from "@/src/components/Button/Button";
 import TextClass from "@/src/components/theme/defaults/TextClass";
+import type { Post } from '@/src/services/posts/PostsService';
+import PostsService from "@/services/posts/PostsService"
+import { FeedPost } from "./patterns/FeedProps";
 
 interface FeedProps {
   children?: React.ReactNode;
@@ -13,7 +16,7 @@ interface FeedProps {
 
 export default function Feed ({children}: FeedProps) {
   return(
-    <Box className="flex relative bg-neutral-000 w-full mt-[-228px] max-w-[683px] rounded-[8px] p-2 pt-[40px] pb-[32px]">
+    <Box className="flex flex-col relative bg-neutral-000 w-full mt-[-228px] max-w-[683px] rounded-[8px] p-2 pt-[40px] pb-[32px]">
       {children}
     </Box>
   )
@@ -22,7 +25,7 @@ export default function Feed ({children}: FeedProps) {
 // eslint-disable-next-line react/display-name
 Feed.Header = () => {
   return (
-    <Box className="w-full border-b-[1px] border-solid border-neutral-200 mb-[300px]">
+    <Box className="w-full border-b-[1px] border-solid border-neutral-200 mb-[20px]">
       <Box className="w-full flex justify-between gap-[16px] px-[25px] mb-[16px]">
         <Image
         className="rounded-full w-[130px] h-[130px]" 
@@ -32,7 +35,7 @@ Feed.Header = () => {
 
         <Box className="flex flex-col mt-2">
           <Button tag="a"
-          href="/sobre"
+          href="/"
           className="flex justify-center items-center my-2 rounded-md p-2 sm:w-auto sm:p-4 md:w-40 md:p-3 bg-primary-500 hover:bg-primary-300 text-white hover:shadow-md transition-all duration-300 ease-in-out">
             Newsletter
           </Button>
@@ -45,10 +48,10 @@ Feed.Header = () => {
       </Box>
       
       <Box className="flex flex-col m-4">
-        <Button.Base className="flex justify-start">
+        <Button.Base tag="a" href="/" className="flex justify-start">
           <Text tag="h1" 
           variant={TextClass.heading4}>
-            Wesley Alcantara
+            Wesley Batista Alcantara
           </Text>
         </Button.Base>
         
@@ -69,12 +72,36 @@ Feed.Header = () => {
 }
 
 // eslint-disable-next-line react/display-name
-Feed.Posts = () => {
+interface FeedPostsProps {
+  posts: Post[];
+}
+
+// eslint-disable-next-line react/display-name
+Feed.Posts = async ({}: FeedPostsProps) => {
+  const postsService = new PostsService();
+  const posts = await postsService.getAll();
+
   return (
     <Box>
-      <Text>
-        Feed Posts
+      <Text variant={TextClass.heading2}>
+        <div className="ml-[35px] mb-[27px]">
+          Últimas Atualizações
+        </div>
       </Text>
+      {posts.map(({ slug, title, metadata, image }) => {
+        const { date, excerpt, tags, url } = metadata
+          return(
+          <FeedPost 
+            key={slug}
+            title={title}
+            date={date}
+            excerpt={excerpt}
+            tags={tags}
+            url={url}
+            image={image}
+          />
+        )
+      })}
     </Box>
   )
 }
