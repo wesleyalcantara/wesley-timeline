@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next dev",
     "start": "next start",
     "lint": "next lint",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,7 +22,7 @@
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.19",
     "gray-matter": "^4.0.3",
-    "next": "13.4.19",
+    "next": "^14.0.1",
     "postcss": "8.4.28",
     "react": "18.2.0",
     "react-dom": "18.2.0",

@@ -8,7 +8,6 @@ const GlobalStyle = createGlobalStyle`
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      
       <ThemeProvider theme={GlobalStyle}>
         <Component {...pageProps} />
       </ThemeProvider>

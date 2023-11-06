@@ -3,6 +3,8 @@ import fs from "fs/promises";
 import matter from "gray-matter";
 
 export interface Post {
+  params?: any
+  searchParams?: any
   metadata: {
     date: string;
     url: string;
@@ -14,7 +16,6 @@ export interface Post {
   slug: string; // Como se fosse o ID do Post
   content: string;
 }
-
 export class PostsService {
   async getAll(): Promise<Post[]> {
     const PATH_POSTS = path.resolve(".", "_data", "posts");

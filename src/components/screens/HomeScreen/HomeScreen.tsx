@@ -1,5 +1,4 @@
 import Box from "@/src/components/Box/Box";
-import type { Post } from '@/services/posts/PostsService'
 import Background from './patterns/Background/Background';
 import Menu from "./patterns/Menu/Menu";
 import Feed from "./patterns/Feed/Feed";
