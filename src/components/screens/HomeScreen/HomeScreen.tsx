@@ -6,24 +6,11 @@ import Feed from "./patterns/Feed/Feed";
 import Footer from "./patterns/Footer/Footer";
 import PostsService from "@/services/posts/PostsService";
 
-export async function getStaticProps() {
-  const postsService = new PostsService();
-  const posts = await postsService.getAll();
-  
-  return {
-    props: {
-      posts,
-    },
-  };
-}
-
 interface HomeScreenProps {
   posts: Post[];
 }
 
-export default async function HomeScreen(props: HomeScreenProps) {
-  const postsService = new PostsService();
-  const posts = await postsService.getAll();
+export default function HomeScreen(props: HomeScreenProps) {
   return (
     <Box
       tag="main"
@@ -37,4 +24,15 @@ export default async function HomeScreen(props: HomeScreenProps) {
       <Footer/>
     </Box>   
   );
+}
+
+export async function getStaticProps() {
+  const postsService = new PostsService();
+  const posts = await postsService.getAll();
+  
+  return {
+    props: {
+      posts,
+    },
+  };
 }
