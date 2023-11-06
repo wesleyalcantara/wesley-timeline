@@ -6,7 +6,7 @@ import Feed from "./patterns/Feed/Feed";
 import Footer from "./patterns/Footer/Footer";
 import PostsService from "@/services/posts/PostsService";
 
-interface HomeScreenProps {
+interface HomeScreenProps extends Post {
   posts: Post[];
 }
 
