@@ -15,7 +15,7 @@ export interface Post {
   content: string;
 }
 
-export default class PostsService {
+export class PostsService {
   async getAll(): Promise<Post[]> {
     const PATH_POSTS = path.resolve(".", "_data", "posts");
     const postFiles = await fs.readdir(PATH_POSTS, { encoding: "utf-8" });

@@ -7,7 +7,7 @@ import Link from "@/src/components/Link/Link";
 import Button from "@/src/components/Button/Button";
 import TextClass from "@/src/components/theme/defaults/TextClass";
 import type { Post } from '@/src/services/posts/PostsService';
-import PostsService from "@/services/posts/PostsService"
+import {PostsService} from "@/services/posts/PostsService"
 import { FeedPost } from "./patterns/FeedProps";
 
 interface FeedProps {

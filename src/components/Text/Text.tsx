@@ -8,11 +8,11 @@ interface TextProps {
   className?: string;
 }
 
-export default function Text ({tag = 'div', children, variant}: TextProps) {
+export default function Text ({tag = 'div', children, variant, className}: TextProps) {
   const BaseText = tag;
 
   return (
-    <BaseText className={variant} >
+    <BaseText className={`@apply ${variant} ${className}`} >
       {children}
     </BaseText>
   )
