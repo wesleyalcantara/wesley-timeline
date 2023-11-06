@@ -4,11 +4,12 @@ import Background from './patterns/Background/Background';
 import Menu from "./patterns/Menu/Menu";
 import Feed from "./patterns/Feed/Feed";
 import Footer from "./patterns/Footer/Footer";
-import PostsService from "@/services/posts/PostsService";
 
-export default function HomeScreen(props: { posts: any; }) {
-  const { posts } = props;
-  
+interface HomeScreenProps extends Post {
+  posts: Post[];
+}
+
+export default function HomeScreen(props: HomeScreenProps) {
   return (
     <Box
       tag="main"
@@ -17,20 +18,9 @@ export default function HomeScreen(props: { posts: any; }) {
       <Menu/>
       <Feed>
         <Feed.Header />
-        <Feed.Posts posts={props.posts} />
+        <Feed.Posts  posts={props.posts} />
       </Feed>
       <Footer/>
     </Box>   
   );
-}
-
-export async function getStaticProps() {
-  const postsService = new PostsService();
-  const posts = await postsService.getAll();
-  
-  return {
-    props: {
-      posts,
-    },
-  };
 }
