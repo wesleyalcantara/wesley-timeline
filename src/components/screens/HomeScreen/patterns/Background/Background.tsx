@@ -1,6 +1,6 @@
 import Box from "@/src/components/Box/Box";
 import React from 'react'
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 interface BackgroundProps {
   children?: React.ReactNode;
