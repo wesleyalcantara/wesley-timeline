@@ -2,8 +2,8 @@ import React from 'react';
 
 interface BoxProps {
   tag?: keyof JSX.IntrinsicElements;
-  children?: React.ReactNode;
-  className?: string | undefined;
+  children?: React.ReactNode | undefined;
+  className?: string;
 }
 
 export default function Box({ children, tag, className }: BoxProps) {

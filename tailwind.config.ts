@@ -8,6 +8,15 @@ const config: Config = {
 
   theme: {
     extend: {
+      button: {
+        primary: {
+          'button':'w-full mt-[16px] border-0 outline-0 no-underline flex justify-center items-center my-2 rounded-md p-2 sm:w-auto sm:p-4 md:w-40 md:p-3 bg-primary-500 hover:bg-primary-300 text-white hover:shadow-md transition-all duration-300 ease-in-out'
+        },
+        secundary: {
+          'button':'flex justify-center items-center my-2 rounded-md p-2 sm:w-auto sm:p-4 md:w-40 md:p-3 bg-neutral-500 hover:bg-neutral-300 text-white hover:shadow-md transition-all duration-300 ease-in-out'
+        }
+      },
+
       colors: {
         warning: {
           '050': '#FFFBEA',

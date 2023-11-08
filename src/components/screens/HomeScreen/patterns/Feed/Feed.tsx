@@ -35,7 +35,7 @@ Feed.Header = () => {
 
         <Box className="flex flex-col mt-2">
           <Button tag="a"
-          href="/"
+          href="/newsletter"
           className="flex justify-center items-center my-2 rounded-md p-2 sm:w-auto sm:p-4 md:w-40 md:p-3 bg-primary-500 hover:bg-primary-300 text-white hover:shadow-md transition-all duration-300 ease-in-out">
             Newsletter
           </Button>
