@@ -6,13 +6,13 @@ import Icon from "@/src/components/Icon/Icon";
 
 export default function Footer() {
   return (
-    <Box className="relative mt-auto w-full bg-neutral-900 text-neutral-200 h-30 gap-[50px] flex items-start justify-center">
+    <Box className="relative mt-auto w-full bg-neutral-900 text-neutral-200 h-30 gap-[40px] sm:gap-[200px] md:gap-[400px] lg:gap-[500px] flex items-start justify-center">
       <Box className="flex-row mb-8">
-        <h3 className="absolute ml-5 justify-center font-bold mt-[15px]">
+        <h3 className="absolute justify-center font-bold mt-[15px]">
           Contatos
         </h3>
         <Text variant={TextClass.body4}>
-          <ul className="ml-5 mb-[20px] mt-[40px] gap-3">
+          <ul className="mb-[20px] mt-[40px] gap-3">
             <li>
               Email: wesleybaadm@gmail.com
             </li>
@@ -41,8 +41,8 @@ export default function Footer() {
       <Box className="absolute bottom-0 flex justify-start px-px w-full bg-neutral-800">
         <Text variant={TextClass.body3}>
           <ul >
-            <li className="px-5">
-              2023 - Desenvolvido por: Wesley Batista Alcantara
+            <li className="px-3">
+              Desenvolvido por: Wesley Batista Alcantara
             </li>
           </ul>
         </Text>
