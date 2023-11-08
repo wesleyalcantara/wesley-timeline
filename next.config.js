@@ -8,6 +8,8 @@ const nextConfig = {
   images: {
     domains: ["images.unsplash.com"],
   },
+
+  target: 'server',
 }
 
 module.exports = nextConfig
