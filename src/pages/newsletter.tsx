@@ -8,12 +8,20 @@ import Button from "../components/Button/Button";
 import Footer from "../components/screens/HomeScreen/patterns/Footer/Footer";
 import validator from 'validator';
 
-function useForm ( {initialValues }) {
+interface FormValues {
+  emailNewsletter: string;
+  // Outros campos conforme necessário
+}
+interface FormProps {
+  initialValues: FormValues;
+}
+
+function useForm ( {initialValues}: FormProps ) {
   const [values, setValues] = React.useState(initialValues);
 
   return {
     values,
-    handleChange(evento) {
+    handleChange(evento: { target: { name: any; value: any; }; }) {
       const { name, value } = evento.target;
       setValues({
         ...values,
