@@ -6,7 +6,7 @@ import Text from "../components/Text/Text";
 import TextClass from '@/src/components/theme/defaults/TextClass';
 import Button from "../components/Button/Button";
 import Footer from "../components/screens/HomeScreen/patterns/Footer/Footer";
-import validator from 'validator';
+/* import validator from 'validator'; */
 
 interface FormValues {
   emailNewsletter: string;
@@ -46,13 +46,13 @@ export default function AbautScreen() {
       console.log('Enviando os dados do formulario!')
 
       // Validar o e-mail utilizando o validator
-      if (validator.isEmail(form.values.emailNewsletter)) {
+/*       if (validator.isEmail(form.values.emailNewsletter)) {
         console.log("E-mail válido, enviando para o servidor");
       } else {
         console.log("E-mail inválido");
         return
       } 
-      (alert("Você foi cadastrado com sucesso, cheque seu email para garantir."))
+      (alert("Você foi cadastrado com sucesso, cheque seu email para garantir.")) */
 
       // Enviar para o servidor o email da pessoa com fetch
       fetch("/api/newsletter/optin", {
@@ -76,7 +76,7 @@ export default function AbautScreen() {
           />
         </Link>
         <Text variant={TextClass.heading2}>
-          Cadastre seu email e fique por dentro das ultimas notícias do universo tec.
+          Cadastre seu e-mail para receber as últimas notícias e novidades do universo da tecnologia.
         </Text>
           <NewsletterTextField
             className="mt-[5px]"
