@@ -18,6 +18,6 @@ export default function HomeScreen(props: HomeScreenProps) {
         <Feed.Posts  posts={props.posts} />
       </Feed>
       <Footer/>
-    </Box>   
+    </Box>
   );
 }

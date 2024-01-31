@@ -30,7 +30,7 @@ export default function Footer() {
             <Link href="https://github.com/wesleyalcantara">
               <Icon name="github" className="" />
             </Link>
-            <Link href="https://www.linkedin.com/in/wesley-alcantara-58148020b/">
+            <Link href="https://www.linkedin.com/in/wesley-batista-alcantara">
               <Icon name="linkedin" />
             </Link>
             <Link href="https://www.instagram.com/wesley.alcantara_">
